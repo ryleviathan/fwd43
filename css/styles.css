@@ -1,0 +1,35 @@
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 20rem;
+    margin: 0 auto;
+    color: white;
+    font-family: poppins;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-image: url(../media/white-lightning.jpeg);
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: .625rem;
+    
+    
+}
