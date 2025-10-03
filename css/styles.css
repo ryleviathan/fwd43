@@ -1,3 +1,4 @@
+
 html{
     box-sizing: border-box;
 }
@@ -9,6 +10,51 @@ html{
     margin: 0;
     padding: 0;
 }
+
+li, a, button{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 500;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+}
+
+header ul{
+    list-style-type: none;
+    background-color: black;
+    padding: 2rem 10%;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_links{
+    list-style: none;
+    }
+
+    .nav_links li{
+        display: inline-block;
+        padding: 0px 1.25rem
+    }
+
+    .nav_links li a{
+        transition: all 0.3s ease 0s;
+    }
+    .nav_links li a:hover{
+        color: blueviolet;
+    }
+    button{
+        padding: .5625rem 1.5625rem;
+        background-color: black;
+        border: none;
+        border-radius: 3.125rem;
+        transition: all 0.3s ease 0s;
+    }
+    button:hover {
+        filter: invert(1)
+    }
+
 body{
     max-width: 20rem;
     margin: 0 auto;
@@ -30,6 +76,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: .625rem;
-    
-    
+    text-align: left;   
 }
+
