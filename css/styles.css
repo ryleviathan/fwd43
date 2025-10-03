@@ -11,15 +11,26 @@ html{
     padding: 0;
 }
 
-li, a, button{
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-font-weight: 500;
-font-size: 1rem;
-color: white;
-text-decoration: none;
+.logo{
+    cursor: pointer;
+    background-color: black;
+    display: flex;
+    align-items: left;
+    height:5rem;
+    max-width: 50%;
 }
 
-header ul{
+.logo:hover{
+    filter: invert(1);
+}
+
+.wrapper{
+    width: auto;
+    margin-inline: auto;
+    max-height: 18.75rem;
+}
+
+header ul nav{
     list-style-type: none;
     background-color: black;
     padding: 2rem 10%;
@@ -28,6 +39,25 @@ header ul{
     justify-content: space-between;
     align-items: center;
 }
+
+.navbar{
+    background-color: black;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    max-width: 100%;
+}
+
+li a{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 500;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+}
+
+
 
 .nav_links{
     list-style: none;
@@ -44,25 +74,18 @@ header ul{
     .nav_links li a:hover{
         color: blueviolet;
     }
-    button{
-        padding: .5625rem 1.5625rem;
-        background-color: black;
-        border: none;
-        border-radius: 3.125rem;
-        transition: all 0.3s ease 0s;
-    }
-    button:hover {
-        filter: invert(1)
-    }
+    
+  
 
 body{
-    max-width: 20rem;
+    min-width: 20rem;
     margin: 0 auto;
     color: white;
     font-family: poppins;
     font-size: 1rem;
     line-height: 1.6;
     background-image: url(../media/white-lightning.jpeg);
+    background-attachment: fixed;
     height:100%;
     background-size: cover;
     background-position: center;
@@ -71,11 +94,30 @@ body{
 
 
 .projects{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    padding: 0 1em;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: .625rem;
     text-align: left;   
 }
+figure {
+    max-width: 500px;
+    height: auto;
+    
+}
 
+ 
+    @media only screen and (min-width: 768px) {
+        .element {
+            width: 50%;
+            float: left;
+        }
+    }
+
+    
+    @media only screen and (min-width: 1200px) {
+        .element {
+            width: 33.33%;
+        }
+    }
