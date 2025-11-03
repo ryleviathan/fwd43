@@ -1,0 +1,116 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    background-image: url(/images/demon-lord.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; 
+    font-family: 'iceland', sans-serif;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 6rem;
+    padding-bottom: 3rem; 
+}
+
+
+.monsters-def {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.monsters-def h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ff5555;
+    text-shadow: 0 0 10px rgba(255, 85, 85, 0.7);
+}
+
+.monsters-def dt {
+    font-size: 2.5rem;
+    font-family: 'iceland', sans-serif;
+    color: orange;
+    margin-top: 1.5rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+
+.monsters-def dd {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0 1.5rem 0;
+    padding-left: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  width: 100%;
+  min-height: 4rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 0 1.5rem;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#logo {
+  height: 4rem;
+  max-height: 4rem;
+  max-width: 120px;
+  width: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+.navbar a:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    text-align: center;
+}

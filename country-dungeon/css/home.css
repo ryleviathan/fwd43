@@ -1,0 +1,141 @@
+/* --- 1. Reset and Box Model --- */
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000000; 
+  font-family: 'iceland', sans-serif;
+  color: white;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  width: 100%;
+  min-height: 4rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 0 1.5rem;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#logo {
+  height: 4rem;
+  max-height: 4rem;
+  width: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+.navbar a:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+
+.content {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: auto; 
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.content h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: gold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9),
+                 0 0 20px #FFD700;
+    letter-spacing: 0.2em;
+}
+
+.content p {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #ccc;
+    margin-top: 1rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  margin-top: auto;
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 3rem;
+        letter-spacing: 0.15em;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+    }
+    
+    .navbar {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 0.5rem; 
+    }
+    
+    .navbar li {
+        margin-left: 0.75rem;
+    }
+}
